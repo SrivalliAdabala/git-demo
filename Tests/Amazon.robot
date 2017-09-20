@@ -21,7 +21,7 @@ ${LOGIN_PASSWORD} =  myPassword1
 #    sleep  5s
 
 Logged out user should be able to search for products
-    [Tags]  search
+    [Tags]  Search Products
     AmazonApp.Search for Products  ${SEARCH_TERM}
 
 Search results page should contain 20 products
