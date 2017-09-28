@@ -15,13 +15,13 @@ ${LOGIN_EMAIL} =  admin@robotframeworktutorial.com
 ${LOGIN_PASSWORD} =  myPassword1
 
 *** Test Cases ***
-#Should be able to login
-#    [Tags]  Login
-#    AmazonApp.Login  ${LOGIN_EMAIL}  ${LOGIN_PASSWORD}
-#    sleep  5s
+Should be able to login
+   #[Tags]  Login
+   #AmazonApp.Login  ${LOGIN_EMAIL}  ${LOGIN_PASSWORD}
+   #sleep  5s
 
 Logged out user should be able to search for products
-    [Tags]  Search Products
+    [Tags]   Search
     AmazonApp.Search for Products  ${SEARCH_TERM}
 
 Search results page should contain 20 products
@@ -31,11 +31,13 @@ Search results page should contain 20 products
     AmazonApp.Verify Results Page Contains Products  18
 
 Logged out user should be able to view a product
+    [Tags]  Smoke View
     AmazonApp.Search for Products  ${SEARCH_TERM}
     sleep  5s
     AmazonApp.Select Product from Search Results
 
 Logged out user should be able to add product to cart
+    [Tags]  Smoke
     AmazonApp.Search for Products  ${SEARCH_TERM}
     sleep  5s
     AmazonApp.Select Product from Search Results
