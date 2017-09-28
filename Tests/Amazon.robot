@@ -15,10 +15,10 @@ ${LOGIN_EMAIL} =  admin@robotframeworktutorial.com
 ${LOGIN_PASSWORD} =  myPassword1
 
 *** Test Cases ***
-#Should be able to login
-#    [Tags]  Login
-#    AmazonApp.Login  ${LOGIN_EMAIL}  ${LOGIN_PASSWORD}
-#    sleep  5s
+Should be able to login
+    [Tags]  Login
+    AmazonApp.Login  ${LOGIN_EMAIL}  ${LOGIN_PASSWORD}
+   sleep  5s
 
 Logged out user should be able to search for products
     [Tags]  Search Products
